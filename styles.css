@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+}
+
+#back_img {
+    background-image: url(https://images.unsplash.com/photo-1506104489822-562ca25152fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9);
+    background-position: top center;
+    background-attachment:scroll;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+}
+
+#placeholdersoyoucanscroll{
+    margin-top: 2px;
+    height:100vh
+}
+
+#navbar {
+    top: 20px;
+    background: none;
+    position: fixed;
+    width: 100%;
+    transition: 1s;
+    -o-transition: 1s;
+    -moz-transition: 1s;
+    -webkit-transition: 1s;
+    text-align: center;
+}
+
+#navbar a {
+    display: inline-block;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 60px;
+    color: black;
+}
+
+#navbar a:hover {
+    color: rgb(65, 65, 65);
+}
