@@ -119,6 +119,7 @@
 .who-text {
     flex: 2;
     padding-left: 2.5%;
+    font-size: 70%;
 }
 
 .who-text-image   {
