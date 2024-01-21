@@ -10,6 +10,7 @@
     background-size: cover;
     height: 80vh;
     width: 100%;
+    overflow: hidden;
 }
 
 #placeholdersoyoucanscroll{
@@ -140,7 +141,7 @@
 }
 
 .pin {
-    height: 60px;
+    width: 60px;
 }
 
 .logo-42 {

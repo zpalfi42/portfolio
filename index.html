@@ -72,18 +72,19 @@
     </main>
 </body>
 <script>
-    let heigth = window.innerHeight;
+    let height = window.innerHeight;
     var target = document.getElementById("back_img");
     var target2 = document.getElementById("info");
-    target.style.height = heigth+"px";
+    target.style.height = height+"px";
 
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
+        let height = window.innerHeight;
         var currentScrollPos = window.pageYOffset;
         if (currentScrollPos <= 50) {
         document.getElementById("navbar").style.top = "20px";
         }
-        else if (currentScrollPos >= heigth-90) {
+        else if (currentScrollPos >= height-90) {
             document.getElementById("navbar").style.top = "-500px";
         }
         else {
@@ -94,10 +95,12 @@
         var target = document.getElementById("back_img");
         var target2 = document.getElementById("info");
         var xvalue = "center";
-        var factor = 0.9;
+        var factor = 1;
         var yvalue = scrolltotop * factor;
-        target.style.backgroundPosition = xvalue + " " + yvalue + "px";
-        target2.style.marginTop = height - yvalue;
+        // target.style.top = yvalue + "px";
+        target.style.height = (height - yvalue) + "px";
+        // console.log(target.style.height);
+        // target2.style.marginTop = (height - yvalue) + "px";
     }
 </script>
 <script>
