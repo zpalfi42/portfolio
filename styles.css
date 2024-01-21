@@ -3,7 +3,8 @@
 }
 
 #back_img {
-    background-image: url("img/background7.jpg");
+    /* background-image: url("img/background7.jpg"); */
+    z-index: -1;
     background-position: top center;
     background-attachment:scroll;
     background-size: cover;
@@ -37,7 +38,7 @@
     font-weight: 900;
     text-shadow: 3px 3px black;
     text-decoration-line:overline underline;
-    color: beige;
+    color: #F5EDCE;
 }
 
 #navbar a:hover {
@@ -45,7 +46,7 @@
 }
 
 #info   {
-    background-color: beige;
+    background-color: #F5EDCE;
     color: white;
     padding: 0;
     margin: 0;
