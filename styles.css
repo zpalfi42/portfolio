@@ -4,7 +4,7 @@
 
 #back_img {
     /* background-image: url("img/background7.jpg"); */
-    z-index: -1;
+    z-index: 0;
     background-position: top center;
     background-attachment:scroll;
     background-size: cover;
@@ -14,11 +14,12 @@
 
 #placeholdersoyoucanscroll{
     margin-top: 2px;
-    height:100vh
+    height:100vh;
 }
 
 #navbar {
-    top: 20px;
+    z-index: 1;
+    top: 10px;
     background: none;
     position: fixed;
     width: 100%;
@@ -27,6 +28,9 @@
     -moz-transition: 1s;
     -webkit-transition: 1s;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
 }
 
 #navbar a {
@@ -34,15 +38,46 @@
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
-    font-size: 60px;
+    font-size: 450%;
     font-weight: 900;
     text-shadow: 3px 3px black;
     text-decoration-line:overline underline;
     color: #F5EDCE;
 }
 
+#navbar b {
+    display: inline-block;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 900;
+    text-shadow: 3px 3px black;
+    color:#F5EDCE;
+}
+
 #navbar a:hover {
     color: rgb(65, 65, 65);
+}
+
+.links {
+    padding-top: 40px;
+}
+
+.github {
+    height: 50px;
+    padding-right: 20px;
+}
+
+.linkedin {
+    height: 50px;
+    /* padding-right: 20px; */
+}
+
+.instagram {
+    height: 50px;
+    padding-right: 20px;
+
 }
 
 #info   {
@@ -50,7 +85,7 @@
     color: white;
     padding: 0;
     margin: 0;
-    height:100vh;
+    /* height:100vh; */
 }
 
 .who-div    {
@@ -76,4 +111,40 @@
     font-size: 18px;
     font-family: 'Playfair Display', serif;
     width: 100%;
+    display: flex;
+    position: relative;
+    /* padding: 20px; */
+}
+
+.who-text {
+    flex: 2;
+    padding-left: 2.5%;
+}
+
+.who-text-image   {
+    /* padding-left: 5%; */
+    width: 100vh;
+    flex: 1;
+}
+
+.who-text-image-42 {
+    width: 100%;
+}
+
+.who-text-image-pin {
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 82%;
+}
+
+.pin {
+    height: 60px;
+}
+
+.logo-42 {
+    width: 80%;
+    padding-left: 10%;
+    display: block;
+    transform: rotate(-8deg);
 }

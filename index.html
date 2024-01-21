@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +19,24 @@
     <main>
         <div id="navbar">
             <a>Zsolt Palfi</a>
+            <b>Software developer</b>
+            <div class="links">
+                <a href="https://github.com/zpalfi42/">
+                    <img src="/img/github.png" alt="github-logo" class="github">
+                </a>
+                <a href="https://www.instagram.com/_zsoltpalfi_/">
+                    <img src="/img/instagram.webp" alt="instagram-logo" class="instagram">
+                </a>
+                <a href="https://es.linkedin.com/in/zpalfi">
+                    <img src="/img/linkedin.png" alt="linkedin-logo" class="linkedin">
+                </a>
+            </div>
         </div>
         <div id="back_img">
+            <!-- <div class="back-text">
+                Software developer
+            </div> -->
+
         </div>
 
         <div id="info">
@@ -41,6 +58,14 @@
 
                         Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ex tortor, maximus non neque interdum, ornare consectetur lorem. Cras feugiat, justo a elementum ullamcorper, turpis ex sagittis nunc, et dapibus odio odio eget ante. Duis auctor ullamcorper urna pellentesque eleifend. Sed vel tempor nibh, non ultrices lorem. Donec non pellentesque mi, luctus posuere erat. Ut feugiat mauris ex. Praesent vel ante pharetra, scelerisque metus eget, scelerisque nisl. Aliquam ac neque sodales, vestibulum felis consequat, sagittis magna. Fusce scelerisque interdum odio a lacinia.
                     </div>
+                    <div class="who-text-image">
+                        <div class="who-text-image-pin">
+                            <img src="/img/pin.png" alt="" class="pin">
+                        </div>
+                        <div class="who-text-image-42">
+                            <img src="/img/42.jpg" alt="" class="logo-42">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -55,10 +80,14 @@
     var prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
+        if (currentScrollPos <= 50) {
         document.getElementById("navbar").style.top = "20px";
-        } else {
-        document.getElementById("navbar").style.top = "-100px";
+        }
+        else if (currentScrollPos >= heigth-90) {
+            document.getElementById("navbar").style.top = "-500px";
+        }
+        else {
+            document.getElementById("navbar").style.top = "-250px";
         }
         prevScrollpos = currentScrollPos;
         var scrolltotop = document.scrollingElement.scrollTop;
