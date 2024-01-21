@@ -3,7 +3,7 @@
 }
 
 #back_img {
-    background-image: url(https://images.unsplash.com/photo-1506104489822-562ca25152fe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9);
+    background-image: url("img/background7.jpg");
     background-position: top center;
     background-attachment:scroll;
     background-size: cover;
@@ -34,9 +34,45 @@
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     font-size: 60px;
-    color: black;
+    font-weight: 900;
+    text-shadow: 3px 3px black;
+    text-decoration-line:overline underline;
+    color: beige;
 }
 
 #navbar a:hover {
     color: rgb(65, 65, 65);
+}
+
+#info   {
+    background-color: beige;
+    color: white;
+    padding: 0;
+    margin: 0;
+    height:100vh;
+}
+
+.who-div    {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.who-title-div {
+    text-align: center;
+    color: black;
+    display: inline-block;
+    width: 100%;
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    padding-bottom: 30px;
+}
+
+.who-text-div   {
+    color: black;
+    text-align: center;
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    width: 100%;
 }

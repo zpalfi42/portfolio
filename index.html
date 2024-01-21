@@ -8,52 +8,64 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
 </head>
 <body id="body">
     <main>
         <div id="navbar">
-            <a href="#">Zsolt Palfi</a>
+            <a>Zsolt Palfi</a>
         </div>
         <div id="back_img">
         </div>
-        <div id="placeholdersoyoucanscroll">
+        <div id="info">
+            <div class="who-div">
+                <div class="who-title-div">
+                    <div class="who-title">
+                        Who am I?
+                    </div>
+                </div>
+                <div class="who-text-div">
+                    <div class="who-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae ullamcorper ante. Nam lobortis imperdiet justo, ut aliquet enim bibendum vitae. Vivamus risus urna, ullamcorper nec leo eget, ullamcorper lacinia mi. Mauris at faucibus lorem, et sagittis arcu. Mauris vitae consectetur tortor. Nam a finibus metus. Phasellus et interdum nisi. Fusce mollis justo vehicula, elementum turpis id, imperdiet augue. Aenean rhoncus augue id feugiat aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut vitae nibh sed risus aliquam bibendum.
+
+                        Morbi finibus hendrerit urna nec pretium. Nam facilisis, dui et hendrerit congue, nisl diam sagittis risus, a mollis velit orci in mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum gravida auctor. Phasellus tristique diam quis convallis sollicitudin. Integer ut quam ante. Curabitur consectetur mi at tempor malesuada. Pellentesque egestas scelerisque nisi, eu eleifend nibh ornare sed. Phasellus ac massa vitae sapien tincidunt luctus. Phasellus aliquet aliquam urna, sed sagittis justo lobortis vitae. Suspendisse vehicula justo eget urna tempor, a tristique tortor porttitor. Cras lobortis mauris et lectus feugiat, non efficitur nulla consectetur. In malesuada diam ut erat gravida aliquam. Sed efficitur nulla vitae feugiat sagittis. Pellentesque sed consectetur ipsum. Aliquam eget aliquet ante.
+
+                        Praesent ac molestie risus. Proin nec hendrerit enim, et vestibulum arcu. Donec commodo tortor sit amet lacus sodales, a interdum lorem sodales. Sed venenatis placerat odio, vel accumsan felis rutrum ultricies. Praesent sollicitudin diam molestie maximus iaculis. Maecenas malesuada neque at ultrices feugiat. Quisque aliquet convallis risus, ac laoreet urna venenatis vitae. Aenean aliquam nulla dolor, eu fringilla mi sagittis in. Quisque porta odio vel ante tincidunt posuere quis sit amet magna. Duis interdum dolor vitae felis vehicula gravida. In ornare odio id nisi aliquam imperdiet. Suspendisse eu orci neque. Vivamus eu aliquam ex. Aenean in turpis id augue laoreet dignissim. Curabitur interdum non elit sodales mollis.
+
+                        Donec ultricies fringilla eros, in viverra sem iaculis id. Praesent ultrices, lorem et lacinia rutrum, sem neque cursus mauris, ut ullamcorper metus lorem cursus elit. Nulla dignissim sollicitudin sem vitae dictum. Pellentesque sed leo eget ante efficitur lobortis non quis dolor. In facilisis purus nec dolor tincidunt posuere. Aliquam placerat, libero ac lacinia bibendum, sem orci cursus mauris, sed semper mi quam vitae odio. Etiam convallis dui nec ex pretium, at tristique odio dapibus.
+
+                        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ex tortor, maximus non neque interdum, ornare consectetur lorem. Cras feugiat, justo a elementum ullamcorper, turpis ex sagittis nunc, et dapibus odio odio eget ante. Duis auctor ullamcorper urna pellentesque eleifend. Sed vel tempor nibh, non ultrices lorem. Donec non pellentesque mi, luctus posuere erat. Ut feugiat mauris ex. Praesent vel ante pharetra, scelerisque metus eget, scelerisque nisl. Aliquam ac neque sodales, vestibulum felis consequat, sagittis magna. Fusce scelerisque interdum odio a lacinia.
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
-    <script>
-        let heigth = window.innerHeight;
-        var target = document.getElementById("back_img");
-        var target2 = document.getElementById("placeholdersoyoucanscroll");
-        target.style.height = heigth+"px";
-        target2.style.marginTop = heigth+"px";
-    </script>
-    <script>
-        document.getElementById("body").onscroll = function myFunction() {
-            var scrolltotop = document.scrollingElement.scrollTop;
-            var target = document.getElementById("back_img");
-            var xvalue = "center";
-            var factor = 0.5;
-            var yvalue = scrolltotop * factor;
-            target.style.backgroundPosition = xvalue + " " + yvalue + "px";
-        }
-    </script>
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-            document.getElementById("navbar").style.top = "20px";
-            } else {
-            document.getElementById("navbar").style.top = "-100px";
-            }
-            prevScrollpos = currentScrollPos;
-            var scrolltotop = document.scrollingElement.scrollTop;
-            var target = document.getElementById("back_img");
-            var xvalue = "center";
-            var factor = 0.5;
-            var yvalue = scrolltotop * factor;
-            target.style.backgroundPosition = xvalue + " " + yvalue + "px";
-        }
-    </script>
 </body>
+<script>
+    let heigth = window.innerHeight;
+    var target = document.getElementById("back_img");
+    var target2 = document.getElementById("info");
+    target.style.height = heigth+"px";
+
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "20px";
+        } else {
+        document.getElementById("navbar").style.top = "-100px";
+        }
+        prevScrollpos = currentScrollPos;
+        var scrolltotop = document.scrollingElement.scrollTop;
+        var target = document.getElementById("back_img");
+        var target2 = document.getElementById("info");
+        var xvalue = "center";
+        var factor = 0.9;
+        var yvalue = scrolltotop * factor;
+        target.style.backgroundPosition = xvalue + " " + yvalue + "px";
+        target2.style.marginTop = height - yvalue;
+    }
+</script>
 </html>
