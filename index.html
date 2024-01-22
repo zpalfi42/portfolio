@@ -33,12 +33,7 @@
             </div>
         </div>
         <div id="back_img">
-            <!-- <div class="back-text">
-                Software developer
-            </div> -->
-
         </div>
-
         <div id="info">
             <div class="who-div">
                 <div class="who-title-div">
@@ -75,46 +70,30 @@
     let height = window.innerHeight;
     var target = document.getElementById("back_img");
     var target2 = document.getElementById("info");
+    var prevScrollpos = window.pageYOffset;
+
     target.style.height = height+"px";
 
-    var prevScrollpos = window.pageYOffset;
-    // console.log(window.screen.height);
-
-    window.onscroll = function() {
-        let height = window.innerHeight;
+    window.onscroll = function()
+    {
         var currentScrollPos = window.pageYOffset;
         var target2 = document.getElementById("info");
         let infoOffset = target2.offsetTop;
-        // console.log(currentScrollPos + " <= " + infoOffset);
-        if (currentScrollPos <= 50) {
+        console.log(window.innerHeight)
+        if (currentScrollPos <= 50)
         document.getElementById("navbar").style.top = "20px";
-        }
-        else if (currentScrollPos >= infoOffset-30) {
-            document.getElementById("navbar").style.top = "-500px";
-        }
-        else {
-            document.getElementById("navbar").style.top = "-250px";
-        }
-        prevScrollpos = currentScrollPos;
-        var scrolltotop = document.scrollingElement.scrollTop;
-        var target = document.getElementById("back_img");
-        var xvalue = "center";
-        var factor = 0.5;
-        var yvalue = scrolltotop * factor;
-        // // target.style.top = yvalue + "px";
-        // target.style.transform = `translateY(${yvalue}px)`
-        // console.log(target.style.height);
-        // target2.style.marginTop = (height - yvalue) + "px";
+        else if (currentScrollPos >= infoOffset-30)
+            document.getElementById("navbar").style.top = "-490px";
+        else
+            document.getElementById("navbar").style.top = `${440 - window.innerHeight}px`;
     }
     window.addEventListener('scroll', function() {
         const parallaxRate = 0.5;
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const backgroundContainer = document.getElementById('back_img');
 
-        // Adjust the 'top' property based on scroll position
         backgroundContainer.style.transform = `translateY(${-scrollTop * parallaxRate}px)`;
         target2.style.marginTop = (height -scrollTop * parallaxRate) + "px";
-        console.log(target2.style.marginTop)
         });
 </script>
 <script>

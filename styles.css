@@ -2,14 +2,22 @@
     margin: 0;
 }
 
+html {
+    font-size: 25px;
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+}
+
 #back_img {
-    /* background-image: url("img/background7.jpg"); */
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100%;
-    /* overflow: hidden; */
     z-index: -1;
 }
 
@@ -124,7 +132,9 @@
 .who-text {
     flex: 2;
     padding-left: 2.5%;
-    font-size: 70%;
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;
+    font-size:1rem;
 }
 
 .who-text-image   {
@@ -140,12 +150,12 @@
 .who-text-image-pin {
     z-index: 2;
     position: absolute;
-    top: 0px;
-    left: 82%;
+    /* top: -10px; */
+    left: 75%;
 }
 
 .pin {
-    width: 60px;
+    width: 30%;
 }
 
 .logo-42 {
