@@ -1,116 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zsolt Palfi</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
-</head>
-<body id="body">
-    <main>
-        <div id="navbar">
-            <a>Zsolt Palfi</a>
-            <b>Software developer</b>
-            <div class="links">
-                <a href="https://github.com/zpalfi42/">
-                    <img src="img/github.png" alt="github-logo" class="github">
-                </a>
-                <a href="https://www.instagram.com/_zsoltpalfi_/">
-                    <img src="img/instagram.webp" alt="instagram-logo" class="instagram">
-                </a>
-                <a href="https://es.linkedin.com/in/zpalfi">
-                    <img src="img/linkedin.png" alt="linkedin-logo" class="linkedin">
-                </a>
-            </div>
-        </div>
-        <div id="back_img">
-        </div>
-        <div id="info">
-            <div class="who-div">
-                <div class="who-title-div">
-                    <div class="who-title">
-                        Who am I?
-                    </div>
-                </div>
-                <div class="who-text-div">
-                    <div class="who-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae ullamcorper ante. Nam lobortis imperdiet justo, ut aliquet enim bibendum vitae. Vivamus risus urna, ullamcorper nec leo eget, ullamcorper lacinia mi. Mauris at faucibus lorem, et sagittis arcu. Mauris vitae consectetur tortor. Nam a finibus metus. Phasellus et interdum nisi. Fusce mollis justo vehicula, elementum turpis id, imperdiet augue. Aenean rhoncus augue id feugiat aliquam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut vitae nibh sed risus aliquam bibendum.
-
-                        Morbi finibus hendrerit urna nec pretium. Nam facilisis, dui et hendrerit congue, nisl diam sagittis risus, a mollis velit orci in mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi dictum gravida auctor. Phasellus tristique diam quis convallis sollicitudin. Integer ut quam ante. Curabitur consectetur mi at tempor malesuada. Pellentesque egestas scelerisque nisi, eu eleifend nibh ornare sed. Phasellus ac massa vitae sapien tincidunt luctus. Phasellus aliquet aliquam urna, sed sagittis justo lobortis vitae. Suspendisse vehicula justo eget urna tempor, a tristique tortor porttitor. Cras lobortis mauris et lectus feugiat, non efficitur nulla consectetur. In malesuada diam ut erat gravida aliquam. Sed efficitur nulla vitae feugiat sagittis. Pellentesque sed consectetur ipsum. Aliquam eget aliquet ante.
-
-                        Praesent ac molestie risus. Proin nec hendrerit enim, et vestibulum arcu. Donec commodo tortor sit amet lacus sodales, a interdum lorem sodales. Sed venenatis placerat odio, vel accumsan felis rutrum ultricies. Praesent sollicitudin diam molestie maximus iaculis. Maecenas malesuada neque at ultrices feugiat. Quisque aliquet convallis risus, ac laoreet urna venenatis vitae. Aenean aliquam nulla dolor, eu fringilla mi sagittis in. Quisque porta odio vel ante tincidunt posuere quis sit amet magna. Duis interdum dolor vitae felis vehicula gravida. In ornare odio id nisi aliquam imperdiet. Suspendisse eu orci neque. Vivamus eu aliquam ex. Aenean in turpis id augue laoreet dignissim. Curabitur interdum non elit sodales mollis.
-
-                        Donec ultricies fringilla eros, in viverra sem iaculis id. Praesent ultrices, lorem et lacinia rutrum, sem neque cursus mauris, ut ullamcorper metus lorem cursus elit. Nulla dignissim sollicitudin sem vitae dictum. Pellentesque sed leo eget ante efficitur lobortis non quis dolor. In facilisis purus nec dolor tincidunt posuere. Aliquam placerat, libero ac lacinia bibendum, sem orci cursus mauris, sed semper mi quam vitae odio. Etiam convallis dui nec ex pretium, at tristique odio dapibus.
-
-                        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ex tortor, maximus non neque interdum, ornare consectetur lorem. Cras feugiat, justo a elementum ullamcorper, turpis ex sagittis nunc, et dapibus odio odio eget ante. Duis auctor ullamcorper urna pellentesque eleifend. Sed vel tempor nibh, non ultrices lorem. Donec non pellentesque mi, luctus posuere erat. Ut feugiat mauris ex. Praesent vel ante pharetra, scelerisque metus eget, scelerisque nisl. Aliquam ac neque sodales, vestibulum felis consequat, sagittis magna. Fusce scelerisque interdum odio a lacinia.
-                    </div>
-                    <div class="who-text-image">
-                        <div class="who-text-image-pin">
-                            <img src="img/pin.png" alt="" class="pin">
-                        </div>
-                        <div class="who-text-image-42">
-                            <img src="img/42.jpg" alt="" class="logo-42">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-</body>
-<script>
-    let height = window.innerHeight;
-    var target = document.getElementById("back_img");
-    var target2 = document.getElementById("info");
-    var prevScrollpos = window.pageYOffset;
-
-    target.style.height = height+"px";
-
-    window.onscroll = function()
-    {
-        var currentScrollPos = window.pageYOffset;
-        var target2 = document.getElementById("info");
-        let infoOffset = target2.offsetTop;
-        console.log(window.innerHeight)
-        if (currentScrollPos <= 50)
-        document.getElementById("navbar").style.top = "20px";
-        else if (currentScrollPos >= infoOffset-30)
-            document.getElementById("navbar").style.top = "-490px";
-        else
-            document.getElementById("navbar").style.top = `${440 - window.innerHeight}px`;
-    }
-    window.addEventListener('scroll', function() {
-        const parallaxRate = 0.5;
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const backgroundContainer = document.getElementById('back_img');
-
-        backgroundContainer.style.transform = `translateY(${-scrollTop * parallaxRate}px)`;
-        target2.style.marginTop = (height -scrollTop * parallaxRate) + "px";
-        });
-</script>
-<script>
-VANTA.NET({
-    el: "#back_img",
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    scale: 1.00,
-    scaleMobile: 1.00,
-    color: 0xc53fff,
-    backgroundColor: 0x0,
-    points: 20.00,
-    maxDistance: 24.00,
-    showDots: false
-  })
-  </script>
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+		</style>
+	</head>
+	<body>
+		<script type="module" src="/main.js"></script>
+	</body>
 </html>
