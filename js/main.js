@@ -15,10 +15,16 @@ renderer.setSize( width, height )
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 threejsCanvas.appendChild( renderer.domElement )
 
-const geometry = new THREE.BoxGeometry( 1, 1, 1 )
+const interaction = new Interaction(renderer, scene, camera);
+
+const geometry = new THREE.BoxGeometry( 3, 2, 1 )
 const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } )
 const cube = new THREE.Mesh( geometry, material )
-scene.add( cube )
+scene.add( cube );
+cube.cursor = 'pointer';
+cube.on('click', function(ev) {
+    console.log(ev);
+});
 
 // camera.position.z = 5;
 
