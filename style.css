@@ -67,7 +67,7 @@ html, body {
 .social-div {
     position: absolute;
     margin-left: 5vw;
-    margin-top: -30vw;
+    margin-top: -20vw;
     height: 30vw;
     display: flex;
     flex-direction: column;
@@ -81,24 +81,24 @@ html, body {
     top:    0vh;
     text-decoration: none;
     color: white;
-    height: 5vw;
-    width: 5vw;
+    height: 5vh;
+    width: 5vh;
     margin-bottom: 2vw;
     opacity: 0;
     transition: opacity 1s;
 }
 
 .social-img{
-    height: 5vw;
-    width: 5vw;
+    height: 5vh;
+    width: 5vh;
 }
 .social-img-lkdn{
-    height: 5vw;
-    width: 5.57xvw;
+    height: 5vh;
+    width: 5.57vh;
 }
 
 .social-line-right {
-    height: 15vw;
+    height: 25vw;
     border-left: 4px solid white;
 }
 
@@ -184,7 +184,7 @@ html, body {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: auto;
     width: 100%;
     margin-top: 100vh;
 }
@@ -193,9 +193,13 @@ html, body {
     margin: 0;
 }
 
+.info-div {
+    display: flex;
+    flex-direction: column;
+}
+
 .about-div {
-    position: absolute;
-    height: 100vh;
+    height: auto;
     width: 100%;
     margin: 0;
     top: 0;
@@ -203,19 +207,19 @@ html, body {
 }
 
 .about-title-div {
-    height: 8vh;
+    height: 6vw;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin: 10vh 10vw 10vh 10vw;
+    margin: 15vh 10vw 5vh 10vw;
     background-color: rgb(255,215,0);
 }
 
 
 .about-title-div h1 {
     position: absolute;
-    font-size: 15vw;
+    font-size: 10vw;
     font-weight: 400;
     color: lightgray;
     z-index: 0;
@@ -225,7 +229,7 @@ html, body {
 }
 
 .about-title-div h2 {
-    font-size: 9vw;
+    font-size: 5vw;
     font-weight: 700;
     color: black;
     z-index: 1;
@@ -234,32 +238,85 @@ html, body {
     text-shadow: gray 2px 2px;
 }
 
+.about-subtitle-div {
+    text-align: center;
+}
+
+.about-subtitle-div h2 {
+    font-size: 2vw;
+    font-family: "Bebas Neue", sans-serif;
+}
+
 @media only screen and (max-width: 768px) {
     .about-title-div {
         height: 4vh;
         margin: 5vh 10vw 2vh 10vw;
     }
 
+    .about-title-div h1 {
+        font-size: 15vw;
+    }
+
     .about-title-div h2 {
+        font-size: 9vw;
         text-shadow: gray 1px 1px;
+    }
+
+    .about-subtitle-div h2 {
+        font-size: 3vw;
     }
 }
 
-.about-subtitle-div {
-    text-align: center;
-}
-
-.about-subtitle-div h2 {
-    font-size: 2.5vw;
-    font-family: "Bebas Neue", sans-serif;
-}
-
 .about-text-div {
-    height: 25vh;
-    margin: 2vh 15vw 0 15vw;
+    height: auto;
+    margin: 2vh 15vw 10vh 15vw;
     text-align: justify;
 }
 
 .about-div i {
+    display: inline-block;
     font-size: 2vw;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.about-div .l {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.about-div .n {
+    color: rgb(47, 109, 254);
+    font-weight: bold;
+}
+
+.about-div .v {
+    color: rgba(3, 107, 13, 0.585);
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+    .about-div {
+        margin: 2vh 15vw 5vh 15vw;
+    }
+
+    .about-div i {
+        font-size: 3.4vw;
+    }
+}
+
+.atoa {
+    width: 80vw;
+}
+
+/*   AWARDS SECTION   */
+.awards-div {
+    background-color: white;
+    height: 125vh;
+}
+
+.awards-box-div {
+    margin: 10vh 5vw 0 5vw;
+    height: 100vh;
+    background-color: beige;
+    box-shadow: 30px -30px 40px black;
 }
