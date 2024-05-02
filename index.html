@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page">
@@ -26,17 +29,33 @@
         <div class="tech-div" id="tech">
             <div class="social-div" id="social">
                 <div class="social-line-left"></div>
-                <a href="https://github.com/zpalfi42"><img src="img/github.png" alt="" class="social-img"></a>
-                <a href="https://www.instagram.com/_zsoltpalfi_/"><img src="img/instagram.webp" alt="" class="social-img"></a>
-                <a href="https://www.linkedin.com/in/zpalfi/"><img src="img/linkedin.png" class="social-img-lkdn" alt=""></a>
+                <a class="a" href="https://github.com/zpalfi42"><img src="img/github.png" alt="" class="social-img"></a>
+                <a class="a" href="https://www.instagram.com/_zsoltpalfi_/"><img src="img/instagram.webp" alt="" class="social-img"></a>
+                <a class="a" href="https://www.linkedin.com/in/zpalfi/"><img src="img/linkedin.png" class="social-img-lkdn" alt=""></a>
                 <div class="social-line-right"></div>
             </div>
-            <h1>TECHNOLOGIES</h1>
+            <div class="about-div">
+                <div class="about-title-div">
+                    <h1>ABOUT ME</h1>
+                    <h2>About me</h2>
+                </div>
+                <div class="about-subtitle-div">
+                    <h2>Story and background</h2>
+                </div>
+                <div class="about-text-div">
+                    <i>
+                        Hi! I'm Zsolt Palfi, a passionate 21-years-old software developer on a
+                        journey to craft innovative solutions and push the boundaries of technology.
+                        Throughout my educational journey and my hard work, I've delved into various
+                        aspects of software development, honing my skills in programming languages
+                        and problem-solving techniques.
+                    </i>
+                </div>
+            </div>
         </div>
     </div>
 </body>
 <script>
-    console.log(this.scrollY);
     const   front = document.getElementById("tech");
     front.style.height = window.innerHeight+"px";
 
@@ -47,11 +66,23 @@
 
         const   back = document.getElementById("title");
         const   front = document.getElementById("tech");
-        // const   social = document.getElementById("social");
 
         back.style.transform = `translateY(${-scrollTop * 0.1}px)`
         front.style.marginTop = (height - scrollTop * 0.1) + "px";
-        // social.style.marginTop = (height - scrollTop * 0.1) + "px";
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const items = document.querySelectorAll('.a');
+
+        function animateItems() {
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = 1;
+                }, 300 * index); // Adjust the delay as per your preference
+            });
+        }
+
+        animateItems();
+    });
 </script>
 </html>
