@@ -60,7 +60,7 @@ html, body {
     width: 50vw;
     height: 50px;
     border-bottom: 4px solid white;
-    box-shadow: 4px 4px 4px black;
+    box-shadow: 0px 5px 3px -3px black;
     margin: -50px auto 10px;
 }
 
@@ -201,9 +201,9 @@ html, body {
 .about-div {
     height: auto;
     width: 100%;
-    margin: 0;
-    top: 0;
+    margin: 0 auto;
     background-color: white;
+    max-width: 70vw;
 }
 
 .about-title-div {
@@ -248,9 +248,14 @@ html, body {
 }
 
 @media only screen and (max-width: 768px) {
+    .about-div {
+        margin: 2vh 5vw 5vh 5vw;
+        max-width: 90vw;
+    }
+
     .about-title-div {
         height: 4vh;
-        margin: 5vh 10vw 2vh 10vw;
+        margin: 5vh 5vw 2vh 5vw;
     }
 
     .about-title-div h1 {
@@ -269,7 +274,7 @@ html, body {
 
 .about-text-div {
     height: auto;
-    margin: 2vh 15vw 10vh 15vw;
+    margin: 2vh 5vw 10vh 5vw;
     text-align: justify;
 }
 
@@ -295,12 +300,13 @@ html, body {
 }
 
 @media only screen and (max-width: 768px) {
-    .about-div {
-        margin: 2vh 15vw 5vh 15vw;
-    }
 
     .about-div i {
         font-size: 3.4vw;
+    }
+
+    .about-text-div {
+        margin: 2vh 7vw 10vh 7vw;
     }
 }
 
@@ -318,5 +324,64 @@ html, body {
     margin: 10vh 5vw 0 5vw;
     height: 100vh;
     background-color: beige;
-    box-shadow: 30px -30px 40px black;
+    box-shadow: 10px -10px 30px black;
+}
+
+
+.awards-title-div {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    padding: 6vh 0 0 0;
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: "Marcellus", serif;;
+}
+
+.awards-left-line {
+    width: 15vw;
+    height: 2px;
+    background-color: black;
+    margin: 0 2vw 0 3vw;
+}
+
+.awards-title {
+    width: 50vw;
+}
+
+.awards-right-line {
+    width: 15vw;
+    height: 2px;
+    background-color: black;
+    margin: 0 3vw 0 2vw;
+}
+
+/* Award one */
+
+.awards-one {
+    background-color: red;
+}
+
+.awards-one-left {
+    background-color: blue;
+}
+
+.awards-one-title {
+    background-color: green;
+}
+
+.awards-one-desc {
+    background-color: yellow;
+}
+
+.awards-one-right {
+    background-color: black;
+}
+
+.awards-one-pic {
+    background-color: gray;
+}
+
+.awards-one-pic-desc {
+    background-color: brown;
 }
