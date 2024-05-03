@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zsolt Palfi</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet"></head>
@@ -64,7 +69,7 @@
                     </div>
                 </div>
                 <!-- <hr class="atoa"> -->
-                <div class="awards-div">
+                <!-- <div class="awards-div">
                     <div class="awards-box-div">
                         <div class="awards-title-div">
                             <div class="awards-left-line"></div>
@@ -90,10 +95,45 @@
                             </div>
                         </div>
                     </div>
+                </div> -->
+                <div class="owl-div">
+                    <div class="owl-carousel owl-theme">
+                        <div class="">CONTENIDO</div>
+                        <div class="">CONTENIDO</div>
+                        <div class="">CONTENIDO</div>
+                        <div class="">CONTENIDO</div>
+                        <div class="">CONTENIDO</div>
+                        <div class="">CONTENIDO</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav: false,
+            dots: true,
+            dotsEach: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplaySpeed: 1000,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                600:{
+                    items:3,
+                },
+                1000:{
+                    items:3,
+                }
+            }
+        })
+    </script>
 </body>
 <script>
     const   front = document.getElementById("tech");
@@ -125,4 +165,5 @@
         animateItems();
     });
 </script>
+
 </html>
