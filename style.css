@@ -67,7 +67,7 @@ html, body {
 .social-div {
     position: absolute;
     margin-left: 5vw;
-    margin-top: -20vw;
+    margin-top: -30vw;
     height: 30vw;
     display: flex;
     flex-direction: column;
@@ -99,7 +99,7 @@ html, body {
 
 .social-line-right {
     height: 25vw;
-    border-left: 4px solid white;
+    border-left: 4px solid transparent;
 }
 
 .social-line-left {
@@ -179,7 +179,7 @@ html, body {
 }
 
 .tech-div   {
-    background-color: white;
+    background-color: transparent;
     z-index: 1;
     position: absolute;
     top: 0;
@@ -214,8 +214,25 @@ html, body {
     justify-content: center;
     position: relative;
     margin: 15vh 10vw 5vh 10vw;
-    background-color: rgb(255,215,0);
+    background: linear-gradient(to right, rgb(255,215,0) 100%, rgba(255,215,0,0) 0%);
+    background-position: left;
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
 }
+
+/* Animation class */
+.animate {
+    animation: marker-paint 3s ease forwards;
+  }
+
+@keyframes marker-paint {
+    0% {
+      background-size: 0% 100%;
+    }
+    100% {
+      background-size: 100% 100%;
+    }
+  }
 
 
 .about-title-div h1 {
@@ -234,10 +251,41 @@ html, body {
     font-weight: 700;
     color: black;
     z-index: 1;
-    /* font-family: "Bebas Neue", sans-serif; */
     font-family: "Dancing Script", cursive;
     text-shadow: gray 2px 2px;
+    position: relative;
+    overflow: hidden; /* Hides text initially */
 }
+
+.about-text span {
+    display: inline-block;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Start slightly below */
+    animation: appear-letter 0.5s forwards; /* 0.5s per letter */
+}
+
+@keyframes appear-letter {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start from below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at its normal position */
+    }
+}
+
+/* Add a delay for each letter */
+.about-text span:nth-child(1) { animation-delay: 0s; }
+.about-text span:nth-child(2) { animation-delay: 0.2s; }
+.about-text span:nth-child(3) { animation-delay: 0.4s; }
+.about-text span:nth-child(4) { animation-delay: 0.6s; }
+.about-text span:nth-child(5) { animation-delay: 0.8s; }
+.about-text span:nth-child(6) { animation-delay: 1.0s; }
+.about-text span:nth-child(7) { animation-delay: 1.2s; }
+.about-text span:nth-child(8) { animation-delay: 1.4s; }
+
+
 
 .about-subtitle-div {
     text-align: center;
@@ -425,11 +473,48 @@ html, body {
     }
 }
 
-.owl-div {
-    max-width: none !important;
-    margin: 10vh 10vw 0 10vw;
-}
-
-.owl-div .owl-carousel{
-    max-width:none !important;
-}
+.wrapper {
+    margin-top: -15vw;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background-color: transparent;
+  }
+  
+  .waves {
+    position: relative;
+    width: 100%;
+    margin-bottom: -7px; /*Fix for safari gap*/
+    min-height: 10px;
+    max-height: 400px;
+  }
+  /* Animation */
+  
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+      transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+      transform: translate3d(85px, 0, 0);
+    }
+  }

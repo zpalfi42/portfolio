@@ -8,9 +8,6 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet"></head>
@@ -40,12 +37,70 @@
                 <a class="a" href="https://www.linkedin.com/in/zpalfi/"><img src="img/linkedin.png" class="social-img-lkdn" alt=""></a>
                 <div class="social-line-right"></div>
             </div>
+            <div class="wrapper">
+                <svg
+                  class="waves"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 24 150 28"
+                  preserveAspectRatio="none"
+                  shape-rendering="auto"
+                >
+                  <defs>
+                    <path
+                      id="gentle-wave"
+                      d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+                    />
+                  </defs>
+                  <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="-2" fill="rgba(255,255,255,0.2)" />
+                    <use xlink:href="#gentle-wave" x="48" y="-2" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,1)" />
+                  </g>
+                </svg>
+              </div>
             <div class="info-div">
                 <div class="about-div">
                     <div class="about-title-div">
                         <h1>ABOUT ME</h1>
-                        <h2>About me</h2>
+                        <h2><span class="about-text">
+                            <span>A</span><span>b</span><span>o</span><span>u</span><span>t</span>
+                            <span> </span>
+                            <span>m</span><span>e</span>
+                        </span></h2>
                     </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const observer = new IntersectionObserver((entries) => {
+                              entries.forEach((entry) => {
+                                if (entry.isIntersecting) {
+                                  entry.target.classList.add('animate'); // Add animation class
+                                }
+                              });
+                            });
+                          
+                            const target = document.querySelector('.about-title-div');
+                            observer.observe(target);
+                          });
+                          document.addEventListener("DOMContentLoaded", function () {
+                            const observer2 = new IntersectionObserver((entries) => {
+                              entries.forEach((entry) => {
+                                if (entry.isIntersecting) {
+                                  // Start the animation 4 seconds before the element enters the viewport
+                                  setTimeout(() => {
+                                    entry.target.querySelector('.about-text').classList.add('handwritten-effect');
+                                  }, 4000); // 4 seconds delay before the animation
+                                }
+                              });
+                            }, { threshold: 0.1 });
+                          
+                            const target = document.querySelector('.about-title-div');
+                            observer2.observe(target);
+                          });
+                          
+                          
+                    </script>
                     <div class="about-subtitle-div">
                         <h2>Story and background</h2>
                     </div>
@@ -68,72 +123,9 @@
                         </i>
                     </div>
                 </div>
-                <!-- <hr class="atoa"> -->
-                <!-- <div class="awards-div">
-                    <div class="awards-box-div">
-                        <div class="awards-title-div">
-                            <div class="awards-left-line"></div>
-                            <div class="awards-title">
-                                <h1>
-                                    AWARDS & CERTIFICATIONS
-                                </h1>
-                            </div>
-                            <div class="awards-right-line"></div>
-                        </div>
-                        <div class="awards-one">
-                            <div class="awards-one-left">
-                                <div class="awards-one-title">
-                                </div>
-                                <div class="awards-one-desc">
-                                </div>
-                            </div>
-                            <div class="awards-one-right">
-                                <div class="awards-one-pic">
-                                </div>
-                                <div class="awards-one-pic-desc">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <div class="owl-div">
-                    <div class="owl-carousel owl-theme">
-                        <div class="">CONTENIDO</div>
-                        <div class="">CONTENIDO</div>
-                        <div class="">CONTENIDO</div>
-                        <div class="">CONTENIDO</div>
-                        <div class="">CONTENIDO</div>
-                        <div class="">CONTENIDO</div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav: false,
-            dots: true,
-            dotsEach: true,
-            autoplay: true,
-            autoplayTimeout: 3000,
-            autoplaySpeed: 1000,
-            responsive:{
-                0:{
-                    items:1,
-                },
-                600:{
-                    items:3,
-                },
-                1000:{
-                    items:3,
-                }
-            }
-        })
-    </script>
 </body>
 <script>
     const   front = document.getElementById("tech");
