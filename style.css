@@ -415,6 +415,7 @@ html, body {
     width: 100%;
     background-color: var(--color1);
   }
+
   .skills-div {
     height: auto;
     width: 100%;
@@ -498,7 +499,7 @@ html, body {
 .skills-text span:nth-child(6) { animation-delay: 1.0s; }
 
 
-.skills-container-div {
+/* .skills-container-div {
     display: grid;
     gap: 5vw;
     padding: 20px;
@@ -520,18 +521,88 @@ html, body {
   .skill:hover {
     transform: scale(1.1);
     background-color: var(--white);
-  }
+  } */
+
+  .skills-super-container {
+    display: grid;
+    gap: 1vw;
+    padding: 0 2vw 0 2vw;
+    grid-template-columns: repeat(2, 1fr);
+    width: 85vw;
+    align-self: center;
+}
+
+.skills-container-div {
+    justify-self: center;
+    margin: 10px;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-container-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--white);
+    margin: 1vh 1vw 5vh 1vw;
+    font-size: 1.5vw;
+    font-family: "Anton", sans-serif;
+    font-weight: 200;
+}
+
+.skills-container-title h3 {
+    margin: 0;
+}
+
+.skills-container-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3vw;
+    margin: 0vh 1vw 5vh 1vw;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 4vw;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+.skill p {
+    margin: 0;
+    line-height: 1;
+    padding: 10px;
+}
+
+.skill:hover {
+    transform: scale(1.5);
+}
+
+.skill:hover svg path,
+.skill:hover p {
+    fill: var(--white); /* For SVG path */
+    color: var(--white); /* For text */
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
     
 @media only screen and (max-width: 768px) {
 
     .skills-title-div {
         height: 4vh;
         margin: 5vh 5vw 2vh 5vw;
-    }
-
-    .skills-container-div {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10vw;
     }
 
     .skills-title-div h1 {
@@ -541,6 +612,29 @@ html, body {
     .skills-title-div h2 {
         font-size: 9vw;
         text-shadow: gray 1px 1px;
+    }
+
+    .skills-super-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-container-div {
+        width: 80vw;
+    }
+
+    .skills-container-title {
+        font-size: 4vw;
+    }
+
+    .skills-container-items {
+        margin: 0;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .skill {
+        height: 10vh;
     }
   }
   
