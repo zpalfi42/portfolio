@@ -613,4 +613,148 @@ h3 {
         height: 10vh;
     }
   }
-  
+
+/* ACHIEVEMENTS */
+
+.super-achiev-div {
+    width: 100%;
+    padding: 3vw 0 3vw 0;
+    background-color: var(--white);
+}
+
+.achiev-div {
+    background-color: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.achiev-title-div {
+    height: 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 15vh 10vw 15vh 10vw;
+    background: linear-gradient(to right, var(--color1) 100%, rgba(255,215,0,0) 0%);
+    background-position: left;
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+}
+
+@keyframes marker-paint {
+    0% {
+      background-size: 0% 100%;
+    }
+    100% {
+      background-size: 100% 100%;
+    }
+  }
+
+
+.achiev-title-div h1 {
+    position: absolute;
+    font-size: 10vw;
+    font-weight: 400;
+    color: lightgray;
+    z-index: 0;
+    font-family: "Anton", sans-serif;
+}
+
+.achiev-title-div h2 {
+    font-size: 5vw;
+    font-weight: 700;
+    color: black;
+    z-index: 1;
+    font-family: "Dancing Script", cursive;
+    text-shadow: gray 2px 2px;
+    position: relative;
+    overflow: hidden; /* Hides text initially */
+}
+
+.achiev-text span {
+    opacity: 0;
+    transform: translateY(20px); /* Start position from below */
+}
+
+/* Triggered animation */
+.animate span {
+    animation: appearFromBelow 0.5s forwards;
+}
+/* Sequential delays for each letter */
+.animate span:nth-child(1) { animation-delay: 0s; }
+.animate span:nth-child(2) { animation-delay: 0.2s; }
+.animate span:nth-child(3) { animation-delay: 0.4s; }
+.animate span:nth-child(4) { animation-delay: 0.6s; }
+.animate span:nth-child(5) { animation-delay: 0.8s; }
+.animate span:nth-child(6) { animation-delay: 1s; }
+.animate span:nth-child(7) { animation-delay: 1.2s; }
+.animate span:nth-child(8) { animation-delay: 1.4s; }
+.animate span:nth-child(9) { animation-delay: 1.6s; }
+.animate span:nth-child(10) { animation-delay: 1.8s; }
+.animate span:nth-child(11) { animation-delay: 2s; }
+.animate span:nth-child(12) { animation-delay: 2.2s; }
+
+@keyframes appearFromBelow {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End position */
+    }
+}
+
+.achiev-carousel-div {
+    width: 70vw;
+    align-self: center;
+}
+
+.swiper {
+    width: 100%;
+    height: 30vw;
+  }
+
+.swiper-slide .two {
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+}
+.swiper-slide .three {
+    background-color: green;
+    height: 100%;
+    width: 100%;
+}
+
+.slide-div {
+    background-color: red;
+    width: 100%;
+    height: 30vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.slide-main-pic-div {
+    background-color: blue;
+    width: 34%;
+}
+
+.slide-small-pic-div {
+    background-color: green;
+    position: absolute;
+    left: 25%;
+    top: 38%;
+    height: 8vw;
+    width: 8vw;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.slide-text-div {
+    background-color: yellow;
+    width: 66%;
+}
