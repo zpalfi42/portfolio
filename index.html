@@ -129,7 +129,7 @@
                         const observer = new IntersectionObserver((entries) => {
                           entries.forEach((entry) => {
                             if (entry.isIntersecting) {
-                              entry.target.classList.add('animate'); // Add animation class
+                              entry.target.classList.add('animate');
                             }
                           });
                         });
@@ -138,21 +138,22 @@
                         observer.observe(target);
                       });
                           
-                      document.addEventListener("DOMContentLoaded", function () {
-                        const observer2 = new IntersectionObserver((entries) => {
-                          entries.forEach((entry) => {
-                            if (entry.isIntersecting) {
-                              // Start the animation 4 seconds before the element enters the viewport
-                              setTimeout(() => {
-                                entry.target.querySelector('.skills-text').classList.add('handwritten-effect');
-                              }, 4000); // 4 seconds delay before the animation
-                            }
-                          });
-                        }, { threshold: 0.1 });
-                      
-                        const target = document.querySelector('.skills-text');
-                        observer2.observe(target);
-                      });            
+                      document.addEventListener("DOMContentLoaded", () => {
+                        const skillsText = document.querySelector(".skills-text");
+                    
+                        if ('IntersectionObserver' in window) {
+                            const observer = new IntersectionObserver((entries) => {
+                                entries.forEach(entry => {
+                                    if (entry.isIntersecting) {
+                                        skillsText.classList.add("animate");
+                                        observer.unobserve(skillsText); // Stop observing after animation starts
+                                    }
+                                });
+                            });
+                    
+                            observer.observe(skillsText);
+                        }
+                    });                          
                     </script>
                     <div class="skills-super-container">
                       <div class="skills-container-div">
@@ -248,7 +249,7 @@
             items.forEach((item, index) => {
                 setTimeout(() => {
                     item.style.opacity = 1;
-                }, 300 * index); // Adjust the delay as per your preference
+                }, 300 * index);
             });
         }
 
