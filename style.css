@@ -1,7 +1,7 @@
 :root {
-    --white: #F5EDED;
-    --color1: #7FA1C3;
-    --color2: #6482AD;    
+    --white: #141E46;
+    --color1: #8DECB4;
+    --color2: #FFF5E0;    
   }
 
 html, body {
@@ -17,38 +17,70 @@ html, body {
 }
 
 .background-overlay-div {
-    background: rgba(0, 0, 0, 0.7);
     height: 100vh;
     color: white;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
 }
 
-.background-overlay-div h1 {
-    margin: 0;
-    padding: 25vh 10vw 0vh 10vw;
-    text-align: center;
-    font-size: 9vw;
-    font-family: "Oswald", sans-serif;
-    text-shadow: 4px 4px 5px black;
+.background-text-div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20vh 0 0 20vw;
 }
 
-.background-overlay-div h2 {
+.background-overtitle {
+    height: fit-content;
+    font-family: "Merriweather", serif;
+    font-size: 1.03vw;
+    color: var(--color2);
     margin: 0;
-    padding: 0vh 10vw 10vh 10vw;
-    text-align: center;
+    padding: 0;
+}
+
+.background-title {
+    font-family: "Anton", sans-serif;
     font-size: 3vw;
-    color: rgb(255, 255, 255, 0.9);
-    font-family: "Oswald", sans-serif;
-    text-shadow: 4px 4px 5px black;
+    color: var(--color1);
+}
 
+.background-overtitle h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.background-title h1 {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.background-subtitle {
+    height: fit-content;
+    font-family: "Merriweather", serif;
+    color: var(--color2);
+}
+
+.background-figure-div {
+    margin-top: 5vh;
+    margin-right: -20vw;
+    width: 90vw;
+    rotate: -20deg;
+    overflow: hidden;
+}
+
+.background-figure-div svg{
+    width: 100%;
+    z-index: 10;
+    fill: var(--color1);
 }
 
 .background-div {
     position: fixed;
     width: 100vw;
-    background-size: cover;
-    background-position: center;
-    background-image: url(img/background.avif);
+    background-color: var(--white);
 }
 
 .title-line {
@@ -62,25 +94,22 @@ html, body {
 }
 
 .social-div {
-    position: absolute;
-    margin-left: 5vw;
-    margin-top: -30vw;
-    height: 30vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1;
-    color: white;
-    text-decoration: none;
+    gap: 1vw;
+    padding: 0 0 0 2vw;
+    z-index: 1000;
+    height: 20vw;
 }
 
 .social-div a {
-    top:    0vh;
-    text-decoration: none;
-    color: white;
+    fill: var(--color1);
     height: 5vh;
     width: 5vh;
-    margin-bottom: 2vw;
     opacity: 0;
     transition: opacity 1s;
 }
@@ -96,7 +125,7 @@ html, body {
 
 .social-line-right {
     height: 25vw;
-    border-left: 4px solid transparent;
+    border-left: 4px solid var(--color1);
 }
 
 .social-line-left {
@@ -193,27 +222,34 @@ html, body {
     display: flex;
     flex-direction: column;
     background-color: var(--white);
+    border-top: 1px dashed var(--color1);
+}
+
+.super-about-div {
+    width: 100%;
+    background-color: var(--white);
+    padding: 3vw 0 3vw 0;
 }
 
 .about-div {
     height: auto;
     width: 100%;
-    margin: 3vw auto;
-    background-color: var(--white);
-    max-width: 70vw;
+    margin: 0 auto;
+    max-width: 90vw;
 }
 
 .about-title-div {
-    height: 6vw;
+    height: 2.5vw;
     display: flex;
+    width:30vw;
     align-items: center;
-    justify-content: center;
     position: relative;
-    margin: 15vh 10vw 5vh 10vw;
+    margin: 15vh 10vw 10vh 5vw;
     background: linear-gradient(to right, var(--color1) 100%, rgba(255,215,0,0) 0%);
     background-position: left;
     background-size: 0% 100%;
     background-repeat: no-repeat;
+    padding-left: 2vw;
 }
 
 /* Animation class */
@@ -233,9 +269,9 @@ html, body {
 
 .about-title-div h1 {
     position: absolute;
-    font-size: 10vw;
+    font-size: 4vw;
     font-weight: 400;
-    color: lightgray;
+    color: var(--color2);
     z-index: 0;
     font-family: "Anton", sans-serif;
     /* font-family: "Bebas Neue", sans-serif; */
@@ -243,14 +279,14 @@ html, body {
 }
 
 .about-title-div h2 {
-    font-size: 5vw;
+    display: flex;
+    font-size: 3vw;
     font-weight: 700;
-    color: black;
+    color: var(--white);
     z-index: 1;
     font-family: "Dancing Script", cursive;
     text-shadow: gray 2px 2px;
-    position: relative;
-    overflow: hidden; /* Hides text initially */
+    padding-left: 2vw;
 }
 
 .about-text span {
@@ -290,6 +326,7 @@ html, body {
 .about-subtitle-div h2 {
     font-size: 2vw;
     font-family: "Bebas Neue", sans-serif;
+    color: var(--color2);
 }
 
 @media only screen and (max-width: 768px) {
@@ -319,20 +356,29 @@ html, body {
 
 .about-text-div {
     height: auto;
+    width: 80vw;
     margin: 2vh 5vw 10vh 5vw;
     text-align: justify;
+    display: flex;
+    flex-direction: row;
+}
+
+.about-text {
+    width: 65vw;
+    align-content: center;
 }
 
 .about-div i {
     display: inline-block;
-    font-size: 1.75vw;
+    font-size: 1.3vw;
     font-family: "Merriweather", serif;
     font-weight: 200;
     font-style: normal;
+    color: var(--color2);
 }
 
 .about-div .blue {
-    color: var(--color2);
+    color: var(--color1);
     font-weight: bold;
 }
 
@@ -357,56 +403,26 @@ html, body {
     }
 }
 
-.wrapper {
-    margin-top: -15vw;
-    width: 100%;
+.about-icons {
     display: flex;
-    align-items: flex-end;
-    overflow: hidden;
-    background-color: transparent;
-  }
-  
-  .waves {
-    position: relative;
-    width: 100%;
-    margin-bottom: -7px; /*Fix for safari gap*/
-    min-height: 10px;
-    max-height: 400px;
-  }
-  /* Animation */
-  
-  .parallax > use {
-    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
-  }
-  .parallax > use:nth-child(1) {
-    animation-delay: -2s;
-    animation-duration: 7s;
-  }
-  .parallax > use:nth-child(2) {
-    animation-delay: -3s;
-    animation-duration: 10s;
-  }
-  .parallax > use:nth-child(3) {
-    animation-delay: -4s;
-    animation-duration: 13s;
-  }
-  .parallax > use:nth-child(4) {
-    animation-delay: -5s;
-    animation-duration: 20s;
-  }
-  @keyframes move-forever {
-    0% {
-      transform: translate3d(-90px, 0, 0);
-    }
-    100% {
-      transform: translate3d(85px, 0, 0);
-    }
-  }
+    flex-direction: column;
+    margin-left: 3vw;
+}
+
+.about-42-icon svg {
+    fill: var(--color1);
+    width: 10vw;
+}
+
+.about-tackle-icon svg {
+    width: 10vw;
+    fill: var(--color1);
+}
 
 /* SKILLS SECTION */
   .super-skills-div {
     width: 100%;
-    background-color: var(--color1);
+    background-color: var(--white);
     padding: 3vw 0 3vw 0;
   }
 
@@ -416,20 +432,21 @@ html, body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 70vw;
+    max-width: 90vw;
   }
   
   .skills-title-div {
-    height: 6vw;
+    height: 2.5vw;
     display: flex;
+    width:30vw;
     align-items: center;
-    justify-content: center;
     position: relative;
-    margin: 15vh 10vw 15vh 10vw;
-    background: linear-gradient(to right, var(--white) 100%, rgba(255,215,0,0) 0%);
+    margin: 15vh 10vw 10vh 5vw;
+    background: linear-gradient(to right, var(--color1) 100%, rgba(255,215,0,0) 0%);
     background-position: left;
     background-size: 0% 100%;
     background-repeat: no-repeat;
+    padding-left: 2vw;
 }
 
 /* Animation class */
@@ -449,22 +466,22 @@ html, body {
 
 .skills-title-div h1 {
     position: absolute;
-    font-size: 10vw;
+    font-size: 4vw;
     font-weight: 400;
-    color: lightgray;
+    color: var(--color2);
     z-index: 0;
     font-family: "Anton", sans-serif;
 }
 
 .skills-title-div h2 {
-    font-size: 5vw;
+    display: flex;
+    font-size: 3vw;
     font-weight: 700;
-    color: black;
+    color: var(--white);
     z-index: 1;
     font-family: "Dancing Script", cursive;
     text-shadow: gray 2px 2px;
-    position: relative;
-    overflow: hidden; /* Hides text initially */
+    padding-left: 2vw;
 }
 
 .skills-text span {
@@ -509,7 +526,7 @@ html, body {
 .skills-container-div {
     justify-self: center;
     margin: 1vw;
-    border: 1px solid var(--white);
+    border: 1px solid var(--color1);
     border-radius: 8px;
     width: 40vw;
     display: flex;
@@ -521,7 +538,7 @@ html, body {
     align-items: center;
     justify-content: center;
     height: 100%;
-    color: var(--white);
+    color: var(--color1);
     margin: 1vh 1vw 5vh 1vw;
     font-size: 1.5vw;
     font-family: "Anton", sans-serif;
@@ -553,6 +570,11 @@ html, body {
     margin: 0;
     line-height: 1;
     padding: 10px;
+    color: var(--color1);
+}
+
+.skill svg path {
+    fill: var(--color1);
 }
 
 .skill:hover {
@@ -561,8 +583,8 @@ html, body {
 
 .skill:hover svg path,
 .skill:hover p {
-    fill: var(--white); /* For SVG path */
-    color: var(--white); /* For text */
+    fill: var(--color2); /* For SVG path */
+    color: var(--color2); /* For text */
 }
 
 h3 {
@@ -625,22 +647,25 @@ h3 {
 .achiev-div {
     background-color: none;
     width: 100%;
+    max-width: 90vw;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 }
 
 
 .achiev-title-div {
-    height: 6vw;
+    height: 2.5vw;
     display: flex;
+    width:30vw;
     align-items: center;
-    justify-content: center;
     position: relative;
-    margin: 15vh 10vw 15vh 10vw;
+    margin: 15vh 10vw 10vh 5vw;
     background: linear-gradient(to right, var(--color1) 100%, rgba(255,215,0,0) 0%);
     background-position: left;
     background-size: 0% 100%;
     background-repeat: no-repeat;
+    padding-left: 2vw;
 }
 
 @keyframes marker-paint {
@@ -655,22 +680,22 @@ h3 {
 
 .achiev-title-div h1 {
     position: absolute;
-    font-size: 10vw;
+    font-size: 4vw;
     font-weight: 400;
-    color: lightgray;
+    color: var(--color2);
     z-index: 0;
     font-family: "Anton", sans-serif;
 }
 
 .achiev-title-div h2 {
-    font-size: 5vw;
+    display: flex;
+    font-size: 3vw;
     font-weight: 700;
-    color: black;
+    color: var(--white);
     z-index: 1;
     font-family: "Dancing Script", cursive;
     text-shadow: gray 2px 2px;
-    position: relative;
-    overflow: hidden; /* Hides text initially */
+    padding-left: 2vw;
 }
 
 .achiev-text span {
@@ -729,32 +754,63 @@ h3 {
 }
 
 .slide-div {
-    background-color: red;
     width: 100%;
     height: 30vw;
     display: flex;
     flex-direction: row;
+    align-content: center;
 }
 
 .slide-main-pic-div {
     background-color: blue;
-    width: 34%;
+    width: 60%;
+    height: 80%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+}
+
+.slide-main-pic-div img {
+    width: 100%;
+    overflow: hidden;
 }
 
 .slide-small-pic-div {
     background-color: green;
     position: absolute;
-    left: 25%;
-    top: 38%;
-    height: 8vw;
-    width: 8vw;
+    left: 34%;
+    top: 2%;
+    height: 5vw;
+    width: 5vw;
     border-radius: 100%;
     align-items: center;
     justify-content: center;
-    display: flex;
+    display: none;
+}
+
+.slide-text-title-div {
+    background-color: purple;
+    width: 40%;
+    margin-top: 6%;
+    padding-right: 2vw;
+    justify-content: right;
+    text-align: right;
+    height: fit-content;
 }
 
 .slide-text-div {
-    background-color: yellow;
-    width: 66%;
+    background-color: var(--color1);
+    position: absolute;
+    width: 60%;
+    height: 50%;
+    right: 1vw;
+    top: 25%;
+    box-shadow: 10px 5px 5px black;
+}
+
+.slide-links-div {
+    background-color: orange;
+    position: absolute;
+    right: 2vw;
+    top: 80%;
 }
