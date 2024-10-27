@@ -227,34 +227,41 @@
     </div>
 </body>
 <script>
-    const   front = document.getElementById("tech");
-    front.style.height = window.innerHeight*2+"px";
+  document.addEventListener("DOMContentLoaded", function () {
+      const front = document.getElementById("tech");
+      const back = document.getElementById("title");
+      const items = document.querySelectorAll('.a');
+      let ticking = false;
 
-    document.onscroll = function() {
-        const   rate = 0.1;
-        const   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        let height = window.innerHeight;
+      front.style.height = window.innerHeight * 2 + "px";
 
-        const   back = document.getElementById("title");
-        const   front = document.getElementById("tech");
+      function onScroll() {
+          if (!ticking) {
+              requestAnimationFrame(() => {
+                  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                  back.style.transform = `translateY(${-scrollTop * 0.1}px)`;
+                  front.style.transform = `translateY(${scrollTop * 0.1}px)`;
+                  ticking = false;
+              });
+              ticking = true;
+          }
+      }
 
-        back.style.transform = `translateY(${-scrollTop * 0.1}px)`
-        front.style.marginTop = (height - scrollTop * 0.1) + "px";
-    }
+      document.addEventListener("scroll", onScroll);
 
-    document.addEventListener("DOMContentLoaded", function() {
-        const items = document.querySelectorAll('.a');
+      function animateItems() {
+          items.forEach((item, index) => {
+              setTimeout(() => {
+                  item.style.opacity = 1;
+              }, 300 * index);
+          });
+      }
 
-        function animateItems() {
-            items.forEach((item, index) => {
-                setTimeout(() => {
-                    item.style.opacity = 1;
-                }, 300 * index);
-            });
-        }
+      animateItems();
 
-        animateItems();
-    });
+      window.addEventListener("resize", () => {
+          front.style.height = window.innerHeight * 2 + "px";
+      });
+  });
 </script>
-
 </html>
