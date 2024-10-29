@@ -351,31 +351,6 @@ html, body {
     color: var(--color2);
 }
 
-@media only screen and (max-width: 768px) {
-    .about-div {
-        margin: 2vh 5vw 0vh 5vw;
-        max-width: 90vw;
-    }
-
-    .about-title-div {
-        height: 4vh;
-        margin: 5vh 5vw 2vh 5vw;
-    }
-
-    .about-title-div h1 {
-        font-size: 15vw;
-    }
-
-    .about-title-div h2 {
-        font-size: 9vw;
-        text-shadow: gray 1px 1px;
-    }
-
-    .about-subtitle-div h2 {
-        font-size: 3vw;
-    }
-}
-
 .about-text-div {
     height: auto;
     width: 80vw;
@@ -405,17 +380,6 @@ html, body {
     font-weight: bold;
 }
 
-@media only screen and (max-width: 768px) {
-
-    .about-div i {
-        font-size: 3.4vw;
-    }
-
-    .about-text-div {
-        margin: 2vh 7vw 10vh 7vw;
-    }
-}
-
 .about-icons {
     margin-left: 3vw;
     align-content: center;
@@ -429,6 +393,59 @@ html, body {
 .about-tackle-icon svg {
     width: 10vw;
     fill: var(--color1);
+}
+
+@media only screen and (max-width: 768px) {
+    .super-about-div {
+        padding: 10vw 0 10vw 0;
+    }
+
+    .about-title-div {
+        margin: 0 5vw 10vw 5vw;
+    }
+
+    .about-title-div h1 {
+        font-size: 7vw;
+    }
+
+    .about-title-div h2 {
+        font-size: 6vw;
+    }
+
+    .about-text-div {
+        margin: 0 5vw 0 5vw;
+        flex-direction: column;
+    }
+
+    .about-text {
+        width: auto;
+    }
+
+    .about-text i {
+        font-size: 2vw;
+    }
+    /* .about-div {
+        margin: 2vh 5vw 0vh 5vw;
+        max-width: 90vw;
+    }
+
+    .about-title-div {
+        height: 4vh;
+        margin: 5vh 5vw 2vh 5vw;
+    }
+
+    .about-title-div h1 {
+        font-size: 15vw;
+    }
+
+    .about-title-div h2 {
+        font-size: 9vw;
+        text-shadow: gray 1px 1px;
+    }
+
+    .about-subtitle-div h2 {
+        font-size: 3vw;
+    } */
 }
 
 /* SKILLS SECTION */
