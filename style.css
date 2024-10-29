@@ -402,7 +402,7 @@ html, body {
 
     .about-title-div {
         margin: 0 5vw 10vw 5vw;
-        width: 40vw;
+        width: 65vw;
         height: 5.5vw;
     }
 
@@ -634,7 +634,7 @@ h3 {
     .skills-title-div {
         height: 5.5vw;
         margin: 0 5vw 10vw 5vw;
-        width: 40vw;
+        width: 65vw;
     }
 
     .skills-title-div h1 {
@@ -675,7 +675,7 @@ h3 {
 
 .super-achiev-div {
     width: 100%;
-    padding: 3vw 0 3vw 0;
+    padding: 3vw 0 10vw 0;
     background-color: var(--white);
 }
 
@@ -870,9 +870,6 @@ h3 {
     box-shadow: 10px 5px 5px black;
     padding: 2vw;
     z-index: 100;
-}
-
-.slide-text-div i {
     font-family: "Merriweather", serif;
     font-size: 1vw;
 }
@@ -899,7 +896,7 @@ h3 {
 
     .achiev-title-div {
         margin: 0 5vw 10vw 5vw;
-        width: 40vw;
+        width: 65vw;
         height: 5.5vw;
     }
 
@@ -909,5 +906,73 @@ h3 {
 
     .achiev-title-div h2 {
         font-size: 9vw;
+    }
+
+    .achiev-carousel-div {
+        width: 90vw;
+    }
+    
+    .swiper {
+        height: auto;
+    }
+
+    .slide-div {
+        height: 100%;
+        width: 70vw;
+        padding: 0 10vw 0 10vw;
+        flex-direction: column-reverse;
+    }
+
+    .slide-text-div {
+        position: absolute;
+        padding: 2.5vw;
+        width: 60vw;
+        margin: 0;
+        top: 50vw;
+        left: 12.5vw;
+        font-size: 2.5vw;
+        font-family: "Merriweather", serif;
+    }
+
+    .slide-text-title-div {
+        margin: 0 0 2vw 0;
+        width: 100%;
+        text-align: right;
+        font-size: 4vw;
+    }
+
+    .slide-main-pic-div {
+        position: relative;
+        display: inline-block;
+        width: 70vw;
+        margin-bottom: 30vw;
+    }
+
+    .slide-main-pic-div img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .slide-main-pic-div svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .slide-links-div {
+        position: static;
+        width: 15vw;
+        gap: 2.5vw;
+        align-self:flex-end;
+        justify-content: right;
+        margin: 2vw 0 2vw 0;
+    }
+
+    .slide-links-div svg {
+        width: 6vw;
     }
 }
