@@ -449,28 +449,6 @@ html, body {
         width: 20vw;
         fill: var(--color1);
     }
-    /* .about-div {
-        margin: 2vh 5vw 0vh 5vw;
-        max-width: 90vw;
-    }
-
-    .about-title-div {
-        height: 4vh;
-        margin: 5vh 5vw 2vh 5vw;
-    }
-
-    .about-title-div h1 {
-        font-size: 15vw;
-    }
-
-    .about-title-div h2 {
-        font-size: 9vw;
-        text-shadow: gray 1px 1px;
-    }
-
-    .about-subtitle-div h2 {
-        font-size: 3vw;
-    } */
 }
 
 /* SKILLS SECTION */
@@ -649,19 +627,22 @@ h3 {
 
     
 @media only screen and (max-width: 768px) {
+    .super-skills-div {
+        padding: 10vw 0 10vw 0;
+    }
 
     .skills-title-div {
-        height: 4vh;
-        margin: 5vh 5vw 2vh 5vw;
+        height: 5.5vw;
+        margin: 0 5vw 10vw 5vw;
+        width: 40vw;
     }
 
     .skills-title-div h1 {
-        font-size: 15vw;
+        font-size: 10vw;
     }
 
     .skills-title-div h2 {
         font-size: 9vw;
-        text-shadow: gray 1px 1px;
     }
 
     .skills-super-container {
@@ -699,7 +680,6 @@ h3 {
 }
 
 .achiev-div {
-    background-color: none;
     width: 100%;
     max-width: 90vw;
     display: flex;
@@ -910,4 +890,24 @@ h3 {
 .slide-links-div svg {
     fill: var(--color2);
     width: 2vw;
+}
+
+@media only screen and (max-width: 768px) {
+    .super-achiev-div {
+        padding: 10vw 0 40vw 0;
+    }
+
+    .achiev-title-div {
+        margin: 0 5vw 10vw 5vw;
+        width: 40vw;
+        height: 5.5vw;
+    }
+
+    .achiev-title-div h1 {
+        font-size: 10vw;
+    }
+
+    .achiev-title-div h2 {
+        font-size: 9vw;
+    }
 }
