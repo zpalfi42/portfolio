@@ -1,7 +1,8 @@
 :root {
     --white: #141E46;
     --color1: #8DECB4;
-    --color2: #FFF5E0;    
+    --color2: #FFF5E0;   
+    --swiper-theme-color:  #8DECB4 !important;
   }
 
 html, body {
@@ -877,7 +878,7 @@ h3 {
 .slide-links-div {
     position: absolute;
     right: 6vw;
-    top: 80%;
+    top: 90%;
     display: flex;
     flex-direction: row;
     width: 5vw;
