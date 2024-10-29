@@ -402,14 +402,16 @@ html, body {
 
     .about-title-div {
         margin: 0 5vw 10vw 5vw;
+        width: 40vw;
+        height: 5.5vw;
     }
 
     .about-title-div h1 {
-        font-size: 7vw;
+        font-size: 10vw;
     }
 
     .about-title-div h2 {
-        font-size: 6vw;
+        font-size: 9vw;
     }
 
     .about-text-div {
@@ -422,7 +424,30 @@ html, body {
     }
 
     .about-text i {
-        font-size: 2vw;
+        font-size: 3vw;
+        line-height: 4vw;
+        display: inline;
+    }
+
+    .about-icons {
+        margin: 5vw 0 0 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10vw;
+        width: 100%;
+        height: 20vw;
+    }
+
+    .about-42-icon svg {
+        fill: var(--color1);
+        width: 20vw;
+    }
+    
+    .about-tackle-icon svg {
+        width: 20vw;
+        fill: var(--color1);
     }
     /* .about-div {
         margin: 2vh 5vw 0vh 5vw;
